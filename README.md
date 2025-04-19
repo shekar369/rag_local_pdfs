@@ -66,7 +66,7 @@ python populate_database.py
   
 Uses Ollama for running models like:<br/>
 -mistral<br/>
--llama2<br/>
+-llama3.2<br/>
 -gemma<br/>
 
 Change model name in query_data.py if you prefer a different LLM.
