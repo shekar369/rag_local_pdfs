@@ -6,6 +6,8 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 ---
 ![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/SImple_RAG.png)
 
+![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/Rag_original-chunks-embedding.png)
+
 ## 🚀 Features
 
 - 📄 **PDF Loader**: Extracts text from PDF files in your local `data/` directory.
