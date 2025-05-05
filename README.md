@@ -8,22 +8,23 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 
 ![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/Rag_original-chunks-embedding.png)
 
-## 🚀 Features
+## Features
 
-- 📄 **PDF Loader**: Extracts text from PDF files in your local `data/` directory.
-- 🧩 **Text Chunking**: Splits text into overlapping chunks using `RecursiveCharacterTextSplitter` to preserve context.
-- 📆 **Vector Store (ChromaDB)**: Stores and indexes embeddings for fast similarity search.
-- 🧠 **Local LLM via Ollama**: Generates contextual answers using lightweight models like Mistral, all on your local machine.
-- ✅ **Testing Suite**: Validate system accuracy using test queries.
+-  **PDF Loader**: Extracts text from PDF files in your local `data/` directory.
+-  **Text Chunking**: Splits text into overlapping chunks using `RecursiveCharacterTextSplitter` to preserve context.
+-  **Vector Store (ChromaDB)**: Stores and indexes embeddings for fast similarity search.
+-  **Local LLM via Ollama**: Generates contextual answers using lightweight models like Mistral, all on your local machine.
+-  **Testing Suite**: Validate system accuracy using test queries.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 rag_local_pdfs/
 │
 ├── data/                      # Local PDFs for ingestion
+├── chroma/            # Local chroma directory will be added when we run populate_database.py
 ├── get_embedding_function.py  # Defines embedding logic
 ├── populate_database.py       # Loads, chunks, embeds, and stores PDFs
 ├── query_data.py              # Queries ChromaDB and returns LLM response
@@ -33,41 +34,41 @@ rag_local_pdfs/
 ```
 
 ## ⚙️ Setup Instructions
-### 1. 📥 Clone the repository
+### 1. Clone the repository
 ```git clone https://github.com/your-username/rag_local_pdfs.git
 cd rag_local_pdfs
 ```
 
-### 2. 🧪 Create virtual environment & install dependencies
+### 2. Create virtual environment & install dependencies
 ```
 python -m venv venv
 source venv/bin/activate   # on Windows use venv\Scripts\activate
 pip install -r requirements.txt
 ```
-### 3. 📂 Add PDFs to data/ folder
+### 3. Add PDFs to data/ folder
 Put your PDF files in the data/ directory for ingestion.
 
-### 4. 🧠 Install and run Ollama
+### 4. Install and run Ollama server. For running LLM Locally.
 **Install Ollama from https://ollama.com, then run:**
+Below step will download model
 ```
 ollama run llama 3.2
 ```
 Make sure Ollama is running in the background.
 
-### 5. 🧬 Populate the vector database
+### 5. Populate the vector database
 ```
 python populate_database.py
 ```
 ### 6. 🔍 Query your documents
 ```python query_data.py "What is the summary of the document?"```
 
-### 7. ✅ Run tests
+### 7.  Run tests
 ```python test_rag.py```<br/><br/>
 
-**🧠 Local LLM Support**
+** Local LLM Support**
   
 Uses Ollama for running models like:<br/>
--mistral<br/>
 -llama3.2<br/>
 -gemma<br/>
 
