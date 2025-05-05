@@ -47,8 +47,6 @@ While LLMs are powerful, they come with limitations in business environments:
 This project implements a **Retrieval-Augmented Generation (RAG)** system using **local PDF documents** as the knowledge base. Built with **LangChain**, **ChromaDB**, and a **local LLM via Ollama**, this setup enables question-answering over your own documents using efficient vector search and contextual responses from LLMs.
 
 ---
-![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/SImple_RAG.png)
-
 
 ## Features
 
@@ -103,11 +101,11 @@ Make sure Ollama is running in the background. By checking http://127.0.0.1:1143
 python populate_database.py
 ```
 ----
-![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/Rag_original-chunks-embedding.png)
+![Sample illustration, showing how data flow from source to Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/media/Rag_original-chunks-embedding.png)
 ### 6. Query your documents
 ```python query_data.py "What is the summary of the document?"```
 
-![Sample illustration, showing how response comes from Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/rag_local_pdfs/Rag_query-vector-response.png)
+![Sample illustration, showing how response comes from Vector db to Response to the User](https://github.com/shekar369/rag_local_pdfs/blob/main/media/Rag_query-vector-response.png)
 
 ### Successful setup will give you response from the pdf you added by giving summary
 
